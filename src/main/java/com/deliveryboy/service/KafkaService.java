@@ -13,8 +13,8 @@ public class KafkaService {
     private KafkaTemplate<String, String> kafkaTemplate;
     private final Logger logger = LoggerFactory.getLogger(KafkaService.class);
     public boolean updateLocation(String location){
-        this.kafkaTemplate.send(AppConstants.LOCATION_TOPIC_NAME, location);
-        logger.info("Message Produced: {}", location);
+            this.kafkaTemplate.send(AppConstants.LOCATION_TOPIC_NAME, location);
+            logger.info("Message Produced: {}", location);
         return true;
     }
 }
